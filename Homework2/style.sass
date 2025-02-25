@@ -1,0 +1,77 @@
+$widthSite: 1000px
+    
+    
+body
+    font-family: Arial, sans-serif
+    margin: 0
+
+a
+    text-decoration: none
+ul
+    list-style-type: none
+.center
+    padding-left: calc( 50% - $widthSite / 2 )
+    padding-right: calc( 50% - $widthSite / 2 )
+.menu
+    display: flex
+    gap: 3rem
+    justify-content: center
+    align-items: center
+    height: 100px
+    background: #ffffff
+    &__head
+        font-size: 16px
+        line-height: 20px
+        color: cornflowerblue
+        &:hover
+            color: #11498a
+.content
+    width: $widthSite
+    display: flex
+    flex-direction: column
+    &__head
+        padding: .5rem
+        color: #222222
+        font-size: 28px
+        line-height: 36px
+        font-weight: 700
+    &__text
+        font-weight: 300
+        font-size: 18px
+        line-height: 30px
+        color: #7D7987
+    &__heading
+        color: coral
+        font-weight: 700
+        font-size: 36px
+        line-height: 80px
+        text-align: center
+.product-box
+    display: flex
+    flex-direction: row
+    gap: 1rem
+    justify-content: center
+.product
+    width: 300px
+    display: flex
+    flex-direction: column
+    img
+        object-fit: contain  
+    &__content
+        padding: 24px 16px
+        background-color: #f8f8f8
+        display: flex
+        flex-direction: column
+        gap: 16px
+    &__name
+        font-style: normal
+        font-weight: 400
+        font-size: 13px
+        line-height: 16px
+        color: #2162b6
+    &__text
+        font-style: normal
+        font-weight: 300
+        font-size: 14px
+        line-height: 17px
+        color: #6ac2fc
