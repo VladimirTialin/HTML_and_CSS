@@ -1,0 +1,77 @@
+$widthSite: 1174px
+$colorText: #000
+$colorLink: #F25822
+    
+*
+    margin: 0
+    padding: 0
+body
+    font-family: 'Inter'
+
+a
+    text-decoration: none
+ul
+    list-style-type: none
+.center
+    padding-left: calc( 50% - $widthSite / 2 )
+    padding-right: calc( 50% - $widthSite / 2 )
+
+.header
+    width: $widthSite
+    margin-top: 40px
+    &__menu
+        display: flex
+        justify-content: space-between
+    &__box
+        display: flex
+        flex-direction: row
+        gap: 34px
+        padding: 10px
+    &__text
+        font-size: 14px
+        font-weight: 600
+        color: $colorText
+        &:hover
+            color: $colorLink
+.content
+    display: flex
+    flex-direction: row
+    gap: 73px
+    margin-top: 84px
+    margin-bottom: 100px
+    &__lean
+        width: 556px
+        display: flex
+        flex-wrap: wrap
+        gap: 20px
+    &__head
+        font-size: 60px
+        font-weight: 600
+        color: $colorText
+    &__text
+        font-size: 20px
+        font-weight: 400
+        color: #888
+    &__button
+        margin-top: 12px
+        display: flex
+        gap: 48px
+        button
+            width: 140px
+            height: 51px
+            border: none
+            background: none
+            font-size: 16px
+            font-weight: 600
+            letter-spacing: 1px
+            color: #AAA
+
+            &:hover
+                background: $colorLink
+                border-radius: 56px
+                color: #fff
+.footer
+    display: flex
+    gap: 3rem
+    padding-bottom: 100px
+    padding-top: 100px
