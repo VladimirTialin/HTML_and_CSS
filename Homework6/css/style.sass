@@ -1,0 +1,167 @@
+$widthSite: 1140px
+$colorSite: #F16D7F
+$colorText: #222
+*
+    margin: 0
+    padding: 0
+a
+    text-decoration: none
+body
+    font-family: "Lato"
+
+.center
+    padding-left: calc( 50% - $widthSite / 2 )
+    padding-right: calc( 50% - $widthSite / 2 )
+.header
+    height: 75px
+    background: $colorText
+    img
+        cursor: pointer
+    &__box
+        width: $widthSite
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        padding-top: 19px
+    &__logo
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 41px
+        img
+            height: 100%
+    &__menu
+        display: flex
+        gap: 33px
+.brand
+    background: #F1E4E6
+    &__head
+        display: flex
+        gap: 64px
+        align-items: center
+    &__box-head
+        justify-content: center
+        align-items: center
+        width: 405px
+        height: 93px
+        border-left: 12px solid $colorSite
+        padding-left: 1rem
+    &__text
+        font-size: 48px
+        font-style: normal
+        font-weight: 600
+        line-height: 52px
+        color: $colorText
+        &_mini
+            font-size: 32px
+        &_color
+            color: $colorSite
+.menu
+    display: grid
+    grid-template-columns: repeat(3, 360px)
+    grid-template-rows: repeat(2, 260px)
+    gap: 30px
+    padding-top: 65px
+
+    &__category
+        position: relative
+        &_down
+            grid-column: span 3
+            height: 180px
+        &_head
+            font-size: 16px
+            font-style: normal
+            font-weight: 400
+            line-height: 18px
+            color: #FFF
+        &_text
+            font-size: 24px
+            font-style: normal
+            font-weight: 600
+            line-height: 26px
+            color: $colorSite
+
+    &__box-content
+        position: absolute
+        display: flex
+        flex-direction: column
+        gap: .5rem
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 100%
+
+.content
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    gap: 30px
+    &__head
+        text-align: center
+        font-size: 30px
+        font-style: normal
+        font-weight: 400
+        line-height: 32px
+        color: $colorText
+        padding-bottom: .5rem
+    &__text
+        text-align: center
+        font-size: 14px
+        font-style: normal
+        font-weight: 400
+        line-height: 16px
+        color: #5D5D5D
+        padding-bottom: 3rem
+    &__btn
+        width: 212px
+        height: 48px
+        border: 1px solid #F26376
+        background: #fff
+        align-items: center
+        font-size: 16px
+        font-style: normal
+        font-weight: 400
+        line-height: 18px
+        color: #F26376
+        margin-top: 18px
+        margin-bottom: 60px
+        cursor: pointer
+
+.product
+    width: 360px
+    display: flex
+    flex-direction: column
+    gap: 12px
+
+    &__head
+        font-size: 18px
+        font-style: normal
+        font-weight: 600
+        line-height: 21px
+        color: $colorText
+        padding-left: 1rem
+        padding-right: 1rem
+        padding-top: 12px
+    &__text
+        font-size: 14px
+        font-style: normal
+        font-weight: 400
+        line-height: 17px
+        color: #5D5D5D
+        padding-left: 1rem
+        padding-right: 1rem
+        &_price
+            font-size: 16px
+            color: $colorSite
+            padding-left: 1rem
+            padding-right: 1rem
+            padding-top: 6px
+
+    
+
+
+
+
+
+
