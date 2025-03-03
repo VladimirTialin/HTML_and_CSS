@@ -1,0 +1,35 @@
+@import 'vars';
+@mixin centerflex(){
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-content: center;
+    width: $thirdSite;
+    gap: $gapGrid;
+
+}
+@mixin centerOfferFlex(){
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    width: $widthSite;
+    gap: $gapGrid;
+}
+@mixin offerBox(){
+    width: $thirdSite;
+    height: 260px;
+    background-size:cover; 
+}
+@mixin centerAlign(){
+    display: flex;
+    align-items: center;
+}
+@mixin centerAlignJustify(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin linkColor(){
+    &:hover{
+        color: $ColorSelectSite;
+    }
+}
