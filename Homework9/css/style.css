@@ -449,7 +449,7 @@ a {
 }
 .subscribe__form {
   text-align: center;
-  text-align-background-color: #f0364f;
+  background-color: #f0364f;
 }
 .subscribe__form_name {
   font-style: normal;
@@ -657,6 +657,7 @@ a {
     height: 363px;
   }
   .box__right {
+    padding: 0;
     position: absolute;
     display: flex;
     align-items: center;

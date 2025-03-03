@@ -18,7 +18,6 @@ body
     img
         cursor: pointer
     &__box
-        width: $widthSite
         display: flex
         flex-direction: row
         align-items: center
@@ -40,10 +39,13 @@ body
         display: flex
         gap: 64px
         align-items: center
+        img
+            object-fit: contain
+            height: 100%
     &__box-head
         justify-content: center
         align-items: center
-        width: 405px
+        max-width: 405px
         height: 93px
         border-left: 12px solid $colorSite
         padding-left: 1rem
@@ -58,16 +60,18 @@ body
         &_color
             color: $colorSite
 .menu
-    display: grid
-    grid-template-columns: repeat(3, 360px)
-    grid-template-rows: repeat(2, 260px)
+    display: flex
+    flex-flow: row wrap
     gap: 30px
     padding-top: 65px
 
     &__category
         position: relative
+        max-width: 360px
+        img
+            object-fit: contain
+            height: 100%
         &_down
-            grid-column: span 3
             height: 180px
         &_head
             font-size: 16px
@@ -157,11 +161,3 @@ body
             padding-left: 1rem
             padding-right: 1rem
             padding-top: 6px
-
-    
-
-
-
-
-
-

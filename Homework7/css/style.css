@@ -297,6 +297,8 @@ a .top {
   .product-head {
     padding-top: 8rem;
   }
+}
+@media (max-width: 768px) {
   .brand__link {
     font-size: 44px;
     line-height: 52px;
