@@ -1,0 +1,248 @@
+@import 'vars'
+@import 'mixins'
+*
+    margin: 0
+    padding: 0
+body
+    font-family: 'latoregular'
+a
+    text-decoration: none
+    .top
+        overflow: hidden  
+.header
+    border: 1px solid #000
+    background-color: $backBlock
+    padding-top: 20px
+    padding-bottom: 20px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+    position: relative
+    svg
+        &:hover
+            path
+                fill: $ColorSelectSite
+
+    &__left
+        @include centerAlign()
+        gap: 41px
+
+    &__right
+        @include centerAlign()
+        gap: 33px
+
+.center
+    padding-left: calc(50% - $widthSite / 2)
+    padding-right: calc(50% - $widthSite / 2)
+.offer
+    padding-top: 63px
+    display: grid
+    grid-template-columns: repeat(3,max(360px))
+    gap: 30px
+    &__box
+        position: relative
+        @include centerAlignJustify()
+        background-size: contain
+        background-repeat: no-repeat
+        border: 1px solid #546747
+        max-height: 260px
+        &_long
+            grid-column: span 3
+            max-height: 180px
+    img
+        background-size: cover
+        background-repeat: no-repeat
+        object-fit: contain
+        width: 100%
+        height: 100%
+    &__text
+        position: absolute
+        font-style: normal
+        font-size: 16px
+        font-weight: 400
+        line-height: 19px
+        text-align: center
+        color: #FFF
+    &__group
+        padding-top: 0.5rem
+        font-style: normal
+        font-size: 24px
+        font-weight: 700
+        line-height: 29px
+        text-align: center
+        color: $ColorSelectSite
+.preview
+    width: 100%
+    background: #F7F7F7
+    padding-top: 11px
+    padding-bottom: 42px
+    @include centerAlign()
+    justify-content: center
+    border-top: 1px solid #EAEAEA
+    border-bottom: 1px solid #EAEAEA
+    box-sizing: border-box
+    &__img
+        display: flex
+        max-height: 765px
+        img
+            object-fit: contain
+            width: 100%
+            height: 100%
+    &__arrow
+        width: 100vw
+        position: absolute
+        display: flex
+        justify-content: space-between
+        &_button
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 47px
+            height: 47px
+            background: #a2a2a23d
+        &:hover
+            path
+                fill: $ColorSelectSite
+.box
+    position: relative
+    display: flex
+    justify-content: center
+    &__left
+        background: #71676914
+        width: 50vw
+        display: flex
+        justify-content: right
+    &__right
+        display: flex
+        align-items: center
+        padding-left: 4rem
+        background-color: #F1E4E6
+        width: 48vw
+.brand
+    display: flex
+    gap: 14rem
+    &__preview
+        max-width: 765px
+        padding-right: 11rem
+        background-color: #F1E4E6
+        img
+            object-fit: contain
+            width: 100%
+            height: 100%
+    &__head
+        display: flex
+        height: 93px
+        border-left: 12px solid $ColorSelectSite
+        padding-left: 1rem
+    &__link
+        font-style: normal
+        font-weight: 900
+        font-size: 48px
+        line-height: 47px
+        color: $backBlock
+        &_black
+            font-weight: 700
+            font-size: 32px
+            line-height: 37px  
+        &_pink
+            color: $ColorSelectSite
+.product-head
+    @include centerAlignJustify()
+    padding-top: 97px
+    padding-bottom: 48px
+    &__name
+        text-align: center
+        font-style: normal
+        font-weight: 400
+        font-size: 30px
+        line-height: 36px
+        color: $backBlock
+
+    &__text
+        text-align: center
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        line-height: 17px
+        color: #9F9F9F
+.product-box
+    display: grid
+    justify-content: center
+    grid-template-columns: repeat(auto-fit,  360px)
+    gap: 1.7647rem
+    padding-bottom: 3rem
+.product
+    max-width: 360px
+    display: flex
+    flex-direction: column
+    img
+        object-fit: contain
+
+    &__content
+        padding: 24px 16px
+        background-color: #f8f8f8
+        display: flex
+        flex-direction: column
+        gap: 16px
+
+    &__name
+        font-style: normal
+        font-weight: 400
+        font-size: 13px
+        line-height: 16px
+        color: $colorText
+
+    &__price
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 19px
+        color: $ColorSelectSite
+
+    &__text
+        font-style: normal
+        font-weight: 300
+        font-size: 14px
+        line-height: 17px
+        color: #5d5d5d
+.product-button
+    @include centerAlignJustify()
+    padding-bottom: 6rem
+    &__button
+        width: 212px
+        height: 48px
+        background: $ColorSelectSite
+        border: none
+        font-style: normal
+        font-size: 16px
+        font-weight: 400
+        line-height: 19px
+        color: #FFFFFF
+        &:hover
+            background-color: $ColorHover
+
+@media(max-width: 1024px)
+    .header__right
+        padding-right: 2rem
+    .preview
+        &__img
+            display: block
+            height: 100%
+    .offer
+        display: grid
+        grid-template-columns: repeat(3,  1fr)
+        padding-left: 1rem
+        padding-right: 1rem
+        padding-top: 1rem
+        grid-gap: 1rem
+    .product-head
+        padding-top: 8rem
+    @media(max-width: 768px)
+    .brand
+        &__link
+            font-size: 44px
+            line-height: 52px
+            &_black
+                font-size: 24px
+                line-height: 28px 
